@@ -1,0 +1,14 @@
+プログラムを実行するディレクトリに、robointフォルダがある。
+robointの中にmojiフォルダがあり、
+mojiの中にtest,trainフォルダがある。それぞれテストデータ、訓練データを入れる。
+test,train各フォルダ内にはpos,negフォルダがある。
+pos内に正例データ画像（今回はA）
+neg内に負例データ画像（今回はnot A）　が入っている。
+
+まとめると、
+./roboint/train/pos/~.png
+               /neg/~.png
+         /test/pos/~.png
+              /neg/~.png
+              
+となっている。
