@@ -6,7 +6,7 @@ pos内に正例データ画像（今回はA）
 neg内に負例データ画像（今回はnot A）　が入っている。
 
 まとめると、
-./roboint/train/pos/~.png
+./moji/train/pos/~.png
                /neg/~.png
          /test/pos/~.png
               /neg/~.png
