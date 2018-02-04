@@ -60,10 +60,12 @@ def main():
     model_eval(model, X_test, y_test)
    
     #おまけ(テスト画像の予想を出力)
+    """
     pre = model.predict(X_test)
     for i, p in enumerate(pre):
         y = p.argmax()
         print (categories[y])
+    """
 
 # モデルを構築
 def build_model(in_shape):
@@ -93,7 +95,7 @@ def build_model(in_shape):
 # モデルを訓練する
 def model_train(X, y):
     model = build_model(X.shape[1:])
-    model.fit(X, y, batch_size=32, nb_epoch=30)
+    model.fit(X, y, batch_size=32, nb_epoch=30, verbose=0)
     # モデルを保存する($pip3 install h5py が必要)
     #hdf5_file = "./image/class-model.hdf5"
     #model.save_weights(hdf5_file)
@@ -101,8 +103,8 @@ def model_train(X, y):
 
 # モデルを評価する
 def model_eval(model, X, y):
-    score = model.evaluate(X, y)
-    print('loss=', score[0])
+    score = model.evaluate(X, y, verbose=0)
+    #print('loss=', score[0])
     print('accuracy=', score[1])
 
 if __name__ == "__main__":
